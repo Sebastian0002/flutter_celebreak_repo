@@ -8,6 +8,11 @@ class FilterProvider extends ChangeNotifier{
   final List<Activity> _filteredList = [];
   List<Activity> get filteredList => _filteredList;
 
+  //This method is encharged to filter the list of activities and also can filter for just today activities just in case of 
+  //get differents dates from the API response.
+
+  // the actual method don't filter for today dates because already create list of dates with today dates
+  // and other dates this for simulate a most common API response in the real life
   void setFilterList(TypeFilter type){  
     _filteredList.clear();
     if(type == TypeFilter.all){
